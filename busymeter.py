@@ -12,4 +12,4 @@ def lookup():
 
 while True:
     lookup()
-    time.sleep(10)
+    time.sleep(60)
