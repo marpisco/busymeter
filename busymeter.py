@@ -6,11 +6,12 @@ import os
 
 async def main():
     os.system("cls")
-    devices = await BleakScanner.discover()
+    devices = await BleakScanner.discover(timeout=8,scanning_mode='active')
     print(length_hint(devices))
     for d in devices:
         print(d)
-    time.sleep(60)
+    print("Esperar 65 segundos para voltar a dar scan")
+    time.sleep(65)
 
 while True:
     asyncio.run(main())
